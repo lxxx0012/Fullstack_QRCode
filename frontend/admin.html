@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="Company Logo" class="logo">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">All Events</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li id="user-link-li" style="display: none;"><a href="user.html">User</a></li>
+                <li id="admin-link-li" style="display: none;"><a href="admin.html">Admin</a></li>
+                <li id="login-link-li"><a href="login.html">Login</a></li>
+                <li id="logout-link-li" style="display: none;"><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <h1>Admin Dashboard</h1>
+        <p class="instructions">Manage events and customer QR codes, and view user registrations.</p>
+
+        <section class="admin-section">
+            <h2>Create New Event</h2>
+            <form id="create-event-form">
+                <input type="text" id="event-title" placeholder="Event Title" required>
+                <textarea id="event-description" placeholder="Event Description" rows="3" required></textarea>
+                <input type="datetime-local" id="event-date" required>
+                <input type="text" id="event-location" placeholder="Event Location" required>
+                <button type="submit">Create Event</button>
+                <p id="create-event-message" class="message"></p>
+            </form>
+        </section>
+
+        <section class="admin-section">
+            <h2>Manage Events</h2>
+            <table id="manage-events-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>QR Code</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <p id="loading-manage-events-message">Loading events for management ... </p>
+        </section>
+
+        <section id="admin-section">
+            <h2>Generate Custom QR Code</h2>
+            <p class="instructions">Generate a dynamic QR Code for any URL or text (not tied to an event)</p>
+            <input type="text" id="qr-input" placeholder="Enter content (URL, text, etc.)">
+            <button id="generate-btn">Generate Dynamic QR Code</button>
+            <div id="qr-code-container">
+                </div>
+            <p id="short-url-display" class="message" style="display: none;">
+                Scan this QR or go to: <a href="#" id="short-url-link" target="_blank"></a>
+            </p>
+        </section>
+
+        <section class="admin-section">
+            <h2>Update Existing Custom QR Code Content</h2>
+            <input type="text" id="short-shortcode-input" placeholder="Enter Short Code (e.g., XYZ123)">
+            <input type="text" id="new-content-input" placeholder="Enter New content / URL">
+            <button id="update-btn">Update QR Code Content</button>
+            <p id="update-message" class="message"></p>
+        </section>
+
+        <section class="admin-section">
+            <h2>User Event Registrations Overview</h2>
+            <div id="user-registrations-list">
+                <p id="loading-registrations-message">Loading user registrations ... </p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; June 2025 Dynamic QR Code with HTML, CSS, JavaScript, MongoDB. All rights reserved.</p>
+        <p>
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode.js/1.0.0/qrcode.min.js"></script>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

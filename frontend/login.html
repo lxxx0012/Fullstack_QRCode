@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic QR Code Generator and Events</title>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="Company Logo" class="logo">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">All Events</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li id="user-link-li" style="display: none;"><a href="user.html">User</a></li>
+                <li id="admin-link-li" style="display: none;"><a href="admin.html">Admin</a></li>
+                <li id="login-link-li"><a href="login.html">Login</a></li>
+                <li id="logout-link-li" style="display: none;"><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p id="login-message" class="message"></p>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; June 2025 Dynamic QR Code with HTML, CSS, JavaScript, MongoDB. All rights reserved.</p>
+        <p>
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Registered Events - Dynamic QR Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="Company Logo" class="logo">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">All Events</a></li>
+                <li id="user-link-li" style="display: none;"><a href="user.html">User</a></li> <li><a href="about.html">About Us</a></li>
+                <li id="admin-link-li" style="display: none;"><a href="admin.html">Admin</a></li>
+                <li id="login-link-li"><a href="login.html">Login</a></li>
+                <li id="logout-link-li" style="display: none;"><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <h1>My Registered Events</h1>
+        <p class="instructions">Here are the events you've registered for.</p>
+        <div id="user-events-list" class="event-list">
+            <p id="loading-user-events-message">Loading your registered events...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; June 2025 Dynamic QR Code with HTML, CSS, JavaScript, MongoDB. All rights reserved.</p>
+        <p>
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script type="module" src="user.js"></script> </body>
+</html>

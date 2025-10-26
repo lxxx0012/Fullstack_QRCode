@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Dynamic QR Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.png" alt="Company Logo" class="logo">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">All Events</a></li>
+                <li id="user-link-li" style="display: none;"><a href="user.html">User</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li id="admin-link-li" style="display: none;"><a href="admin.html">Admin</a></li>
+                <li id="login-link-li"><a href="login.html">Login</a></li>
+                <li id="logout-link-li" style="display: none;"><a href="#" id="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <h1>Contact Us</h1>
+        <p class="instructions">Have a question or feedback? We'd love to hear from you!</p>
+
+        <section class="contact-section">
+            <h2>Send Us a Message</h2>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit">Send Message</button>
+                <p id="form-message" class="message"></p>
+            </form>
+        </section>
+
+        <section class="contact-info-section">
+            <h2>Other Ways to Reach Us</h2>
+            <p><strong>Email:</strong> <a href="mailto:info@dynamicqrcode.com">info@dynamicqrcode.com</a></p>
+            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 QR Code Lane, Digital City, ON L1B 2C3, Canada</p>
+            <p><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM EST</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; June 2025 Dynamic QR Code with HTML, CSS, JavaScript, MongoDB. All rights reserved.</p>
+        <p>
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script type="module" src="js/script.js"></script> </body>
+</html>

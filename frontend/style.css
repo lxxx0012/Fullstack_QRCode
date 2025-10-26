@@ -1,0 +1,445 @@
+ /* General Body and Container */
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start, not center for taller pages */
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+ }
+
+ .container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 95%; /* Wider container */
+    max-width: none; /* Max width for larger screens */
+    margin-bottom: 20px; /* Space at teh botoom */
+ }
+
+ /* Logo */
+ .logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ /* Navigation */
+ .main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0; /* Adjusted margin */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center;
+    gap: 15px; /* Space between navigation items */
+ }
+
+ .main-nav li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+ }
+
+ .main-nav li a:hover {
+    background-color: #e9f5ff;
+ }
+
+ hr {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 25px 0;
+ }
+
+ /* Headings and Instructions */
+ h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+ }
+
+ .instructions {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 25px;
+ }
+
+ /* --- About Page Specific Styles --- */
+ .about-section ul, 
+ .privacy-section ul {
+   list-style-type: none; /* Removes the bullet points */
+   padding-left: 0; /* Remove default left padding from the ul */
+   margin-left: 0; /* Ensures its' flush left */
+ }
+
+ .about-section li, 
+ .privacy-section li {
+   margin-bottom: 8px; /* Optional: add some space between list items if needed */
+ }
+
+
+ /* Forms (General) */
+ input[type="text"],
+ input[type="email"],
+ input[type="password"],
+ input[type="datetime-local"],
+ textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+ }
+
+ /* Optional: Focus state for inputs */
+ input[type="text"]:focus,
+ input[type="email"]:focus,
+ input[type="password"]:focus,
+ textarea:focus {
+   border-color: #007bff; /* Highlight border when input is focused */
+   outline: none; /* Remove default outline */
+   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtile shadow on focus */
+ }
+
+ textarea {
+    resize: vertical; /* Allow vertical resizing */
+ }
+
+ button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+ }
+
+ button:hover {
+    background-color: #0056b3;
+ }
+
+ /* Messages (e.g., success/error) */
+ .message {
+    margin-top: 10px;
+    font-weight: bold;
+    min-height: 1.2em; /* To revent layout shift when message appears */
+ }
+
+ .message[style*="color: green"] { color: greens; } /* Specificity for JS-set colors */
+ .message[style*="color: red"] { color: red; }
+
+ /* QR Code Display Areas */
+ #qr-code-container, 
+ .qr-code-display {
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    min-height: 100px; /* Smaller min-height for QR-only sections */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ #qr-code-container canvas,
+ .qr-code-display canvas, 
+ .qr-code-small canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+ }
+
+ .qr-code-small {
+    padding: 5px; /* Smaller padding for small QR codes */
+    border: 1px solid #eee; /* Lighter border */
+    display: inline-block; /* For table cells */
+
+ }
+
+ .qr-link-text {
+    font-size: 0.85em;
+    color: #555;
+    word-break: break-all;
+    margin-top: 5px;
+ }
+
+ /* Event List / Grid Styles (used across index, events, user pages) */
+ .event-list, .event-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    padding: 10px;
+ }
+
+ .event-item {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+ }
+
+ .event-item:hover {
+    transform: translateY(-5px);
+ }
+
+ .event-item h3 {
+    margin-top: 0;
+    color: #0056b3;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+ }
+
+ .event-item p {
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 8px;
+ }
+
+ .register-btn {
+    background-color: #28a745;
+     /* Green for register button */
+     margin-top: 15px;
+     width: auto; /* Override general button width */
+     display: inline-block;
+     padding: 10px 20px;
+     font-size: 1em;
+ }
+
+ .register-btn:hover {
+    background-color: #218838;
+ }
+
+ /* Admin Section Specific Styles */
+ .admin-section {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+ }
+
+ .admin-section h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #0056b3;
+ }
+
+ /* Admin Forms */
+#create-event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#create-event-form button {
+    width: auto;
+    align-self: center; /* Center button in flex column */
+    margin-bottom: 0;
+}
+
+/* Admin Table Styles */
+#manage-events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#manage-events-table th,
+#manage-events-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#manage-events-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+#manage-events-table td input[type="text"],
+#manage-events-table td input[type="datetime-local"] {
+    width: calc(100% - 10px); /* Adjust for padding in cell */
+    padding: 5px;
+    margin: 0;
+    border: 1px solid transparent; /* No border by default */
+    background-color: transparent; /* No background by default */
+    font-size: 0.9em;
+    box-sizing: border-box;
+}
+#manage-events-table td button {
+    padding: 6px 12px;
+    font-size: 0.85em;
+    margin: 2px;
+    margin-bottom: 0; /* Override general button margin */
+}
+
+/* Admin Registration List */
+#user-registrations-list .admin-event-registration-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+#user-registrations-list .admin-event-registration-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+#user-registrations-list .admin-event-registration-item ul {
+    list-style: inside;
+    padding-left: 0;
+    margin-top: 5px;
+}
+
+#user-registrations-list .admin-event-registration-item li {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Loading messages */
+#loading-events-message,
+#loading-manage-events-message,
+#loading-registrations-message,
+#loading-registered-message {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 98%;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #manage-events-table, #manage-events-table thead, #manage-events-table tbody, #manage-events-table th, #manage-events-table td, #manage-events-table tr {
+        display: block;
+    }
+    #manage-events-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #manage-events-table tr { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 8px; }
+    #manage-events-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    #manage-events-table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #555;
+    }
+    #manage-events-table td:nth-of-type(1):before { content: "Title:"; }
+    #manage-events-table td:nth-of-type(2):before { content: "Date:"; }
+    #manage-events-table td:nth-of-type(3):before { content: "Location:"; }
+    #manage-events-table td:nth-of-type(4):before { content: "QR Code:"; }
+    #manage-events-table td:nth-of-type(5):before { content: "Actions:"; }
+    #manage-events-table td:last-child { border-bottom: 0; }
+    #manage-events-table td input { width: 100%; } /* Adjust for mobile layout */
+}
+
+ /* Footer Style */
+ footer {
+    margin-top: 40px; /* Space above the footer */
+    padding: 20px 0;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 1px solid #444; /* Light border at the top */
+    width: 100%; /* Ensure it spans full width */
+    box-sizing: border-box; /* Include padding in width */
+    flex-shrink: 0; /* Prevents footer from shrinking if content is short */
+ }
+
+ footer p {
+    margin: 5px 0;
+ }
+
+ footer a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+ }
+
+ footer a:hover {
+    color: #0056b3; /* Darker link color on hover */
+    text-decoration: underline;
+ }
+
+ /* Ensure body is a flex container for sticky footer effect */
+ body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+ }
+
+ .container {
+    flex-grow: 1; /* Allows content container to grow and push fotter down */
+    margin-bottom: 0; /* Revmove previous margin to allow footer to sit flush */
+ }
+
+ /* Adjustments for smaller screens */
+ @media (max-width: 768px) {
+    footer {
+        padding: 15px 10px
+    }
+
+    footer p {
+        font-size: 0.85em;
+    }
+ }
